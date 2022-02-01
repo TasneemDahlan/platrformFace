@@ -1,0 +1,196 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300);
+
+/* @start demo styles | these can be removed
+------------------------------------------------------- */
+.bgx{ background:#6C82A2; }
+
+.tagline span{ 
+	display:block;
+	text-transform:uppercase;
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	font-size:15px;
+	padding:10px 0;
+	font-weight:300; 
+	color:#00ACEE;
+}
+
+.rating-container{
+	background:#fff;
+	margin:40px auto;
+	max-width:452px;
+	padding:30px 35px; 	
+	-webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+	-o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+}
+
+/* @start rating widget styles  
+------------------------------------------------------ */
+.css-rating-widget, 
+.css-rating-widget *{ 
+	font-weight:normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	 
+	padding:0;
+	margin:0;
+}
+
+/* @rating and review widget 
+------------------------------------------------------- */
+.css-rating-widget .uit-rating-wrapper{ display:block; padding:3px 0; }
+.css-rating-widget .uit-rating-wrapper:before,
+.css-rating-widget .uit-rating-wrapper:after{ display: table; content: ""; line-height: 0; }
+.css-rating-widget .uit-rating-wrapper:after{ clear: both; }
+.css-rating-widget .uit-rating { 
+	border: none;
+	font-size:14px;
+	position:relative;
+	display:inline-block;
+}
+
+.css-rating-widget .uit-rating-wrapper > span	{ 
+	font-family:'Open Sans', Arial, Helvetica, sans-serif;
+	display:inline-block;
+	font-size:0.85em; 
+	float:right;
+	color:#777;  
+}
+.css-rating-widget .uit-rating label,
+.css-rating-widget .uit-rating label span,
+.css-rating-widget .uit-rating label:before{
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+.css-rating-widget .uit-rating label{ color: #C8C8C8; float: left; }
+.css-rating-widget .uit-rating input {  
+	border: 0;
+	width: 1px; 
+	height: 1px;
+	overflow: hidden;
+	position: absolute!important;
+	clip: rect(1px 1px 1px 1px); 
+	clip: rect(1px, 1px, 1px, 1px);
+	opacity:0;
+} 
+
+.css-rating-widget .uit-rating label:before { 
+	margin: 5px;
+	font-size:1.1em;
+	font-family: FontAwesome;
+	display: inline-block;
+	content: "\f005";
+}
+    
+.css-rating-widget .uit-rating .sta-half:before { content: "\f089"; position: absolute; }   
+.css-rating-widget .uit-rating:hover label:hover,
+.css-rating-widget .uit-rating:hover label:hover ~ label,
+.css-rating-widget .uit-rating input:checked ~ label { color: #FFB801;	}
+.css-rating-widget .uit-rating:hover label:hover ~ label{ color:#FFED85; }	
+.css-rating-widget .uit-rating label, 
+.css-rating-widget .uit-rating:hover label,
+.css-rating-widget .uit-rating:hover input ~ label { color: #DBE3E6; }
+.css-rating-widget .uit-rating label span{
+	font-family:Arial, Helvetica, sans-serif;
+	text-shadow: 0 1px rgba(255, 255, 255, 0);
+	-webkit-transition: margin 0.6s, opacity 0.6s;
+	-moz-transition: margin 0.6s, opacity 0.6s;
+	-ms-transition: margin 0.6s, opacity 0.6s;
+	-o-transition: margin 0.6s, opacity 0.6s;
+	transition: margin 0.6s, opacity 0.6s;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;	
+	white-space:nowrap;
+	position:absolute;
+	padding:5px 10px;
+	font-weight:bold;
+	background:#000;
+	font-size:11px;
+	margin-left:0;
+	display:block;
+	left:-9999px;
+	opacity:0;
+	z-index:10;
+	top:-80px;
+	color:#fff;
+
+}
+
+.css-rating-widget .uit-rating label:hover span{ top:-25px; opacity:1; left: auto; }
+.css-rating-widget .uit-rating label span:before{
+	content: ''; 
+	position: absolute;
+	border-top: 4px solid #000;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;	
+	left: 8px;
+	top: 100%;
+}
+
+/* @theme colors 
+----------------------------------------------------------------------- */
+
+/* Green 
+----------------------------------------------------- */
+.css-rating-widget .green-rating:hover label:hover,
+.css-rating-widget .green-rating:hover label:hover ~ label,
+.css-rating-widget .green-rating input:checked ~ label { color:#1FDEB8;	}
+.css-rating-widget .green-rating:hover label:hover ~ label{ color:#93F0DD; }
+
+/* Blue
+----------------------------------------------------- */
+.css-rating-widget .blue-rating:hover label:hover,
+.css-rating-widget .blue-rating:hover label:hover ~ label,
+.css-rating-widget .blue-rating input:checked ~ label { color:#438FFD;	}
+.css-rating-widget .blue-rating:hover label:hover ~ label{ color:#9BCDEE; }
+
+/* Purple
+----------------------------------------------------- */
+.css-rating-widget .purple-rating:hover label:hover,
+.css-rating-widget .purple-rating:hover label:hover ~ label,
+.css-rating-widget .purple-rating input:checked ~ label { color:#9B59B6;	}
+.css-rating-widget .purple-rating:hover label:hover ~ label{ color:#D3B7DF; }
+
+/* Red
+----------------------------------------------------- */
+.css-rating-widget .red-rating:hover label:hover,
+.css-rating-widget .red-rating:hover label:hover ~ label,
+.css-rating-widget .red-rating input:checked ~ label { color:#EA6153;	}
+.css-rating-widget .red-rating:hover label:hover ~ label{ color:#FF9999; }
+
+/* Black
+----------------------------------------------------- */
+.css-rating-widget .black-rating:hover label:hover,
+.css-rating-widget .black-rating:hover label:hover ~ label,
+.css-rating-widget .black-rating input:checked ~ label { color:#3D566E;	}
+.css-rating-widget .black-rating:hover label:hover ~ label{ color:#7B99B7; }
+
+
+.css-rating-widget .uit-rating label, 
+.css-rating-widget .uit-rating:hover label,
+.css-rating-widget .uit-rating:hover input ~ label { color: #DBE3E6; }
+
+
+/* @star sizes | medium and large 
+------------------------------------------------------------------------ */
+.css-rating-widget .medium-rating label:before {  font-size:1.6em; }
+.css-rating-widget .large-rating label:before {  font-size:2.17em; }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.css-rating-widget .uit-rating{ -webkit-animation: bugfix infinite 1s; }
+	@-webkit-keyframes bugfix { 
+		from { padding: 0;  } 
+		to { padding: 0; } 
+	}				
+}
+
+/* @responsiveness
+-------------------------------------------------- */
+@media (max-width: 768px) {
+
+}
